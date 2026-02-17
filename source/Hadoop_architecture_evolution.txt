@@ -11,7 +11,7 @@ Components in Hadoop 1.x:
 
 Limitations of Hadoop 1.x:
 i.Only one NameNode if it fails, the cluster goes down.
-ii.JobTracker becomes a bottleneck. Can manage only ~4,000 nodes reliably.
+ii.JobTracker becomes a bottleneck. Can manage only 4,000 nodes reliably.
 iii. Static Resource Allocation
 
 2. Hadoop 2.x Architecture
