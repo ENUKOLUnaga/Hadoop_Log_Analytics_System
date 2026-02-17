@@ -1,0 +1,42 @@
+1. Hadoop 1.x Architecture
+--------------------------
+Overview:
+Hadoop 1.x is built on the original MapReduce v1 (MRv1) architecture.
+
+Components in Hadoop 1.x:
+->NameNode - A single master that stores filesystem metadata.
+->DataNode - Stores actual data blocks.
+->JobTracker - Responsible for Job scheduling ,Resource allocation ,Fault detection ,Task failures
+->TaskTracker - Executes map and reduce tasks
+
+Limitations of Hadoop 1.x:
+i.Only one NameNode if it fails, the cluster goes down.
+ii.JobTracker becomes a bottleneck. Can manage only ~4,000 nodes reliably.
+iii. Static Resource Allocation
+
+2. Hadoop 2.x Architecture
+---------------------------
+overview:
+Hadoop 2.x introduced YARN (Yet Another Resource Negotiator), which separated resource management from job scheduling, removing JobTracker bottlenecks.
+
+Components in Hadoop 2.x:
+->ResourceManager - Global master for resource allocation
+->NodeManager -  Runs on each node
+->ApplicationMaster - scheduling tasks, Fault tolerance, Data locality optimization
+
+Limitations of Hadoop 2.x:
+1.NameNode still depends heavily on RAM
+2.ResourceManager is a single point of bottleneck
+3.High storage overhead due to 3x replication
+4.No erasure coding
+
+3.Hadoop 3.x Architecture:
+--------------------------
+overview:
+Hadoop 3.x is the most advanced and feature-rich generation of the Hadoop ecosystem.
+It focuses on scalability, storage efficiency, high availability, containerization, and support for modern workloads.
+
+Components in Hadoop 3.x:
+A. HDFS (Hadoop Distributed File System) - NameNode, DataNode, JournalNode, Router-Based Federation
+B. YARN (Yet Another Resource Negotiator) - ResourceManager, NodeManager, ApplicationMaster
+C.HDFS Eraser - Storage-efficient data protection method.
