@@ -1,0 +1,2 @@
+Hadoop 3.3.6
+Python 3.12.3
